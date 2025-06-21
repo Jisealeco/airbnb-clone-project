@@ -1,0 +1,25 @@
+##  CI/CD Pipeline
+
+Understand how CI/CD pipelines contribute to the development process.
+
+### What is CI/CD?
+
+CI/CD stands for **Continuous Integration** and **Continuous Deployment/Delivery**. It's a set of practices that automate the process of building, testing, and deploying code changes to ensure faster and more reliable software delivery.
+
+- **Continuous Integration (CI)**: Automatically builds and tests code every time a team member pushes changes to the repository.
+- **Continuous Deployment (CD)**: Automatically deploys the latest code to a staging or production environment after successful testing.
+
+### - Why CI/CD is Important
+
+- **Faster Development Cycles**: Reduces manual work by automating tests and deployments.
+- **Early Bug Detection**: Continuous testing helps identify bugs as soon as they are introduced.
+- **Consistency**: Ensures the application behaves the same way across all environments (dev, staging, production).
+- **Reliability**: Minimizes human error and increases confidence in deployments.
+- **Team Collaboration**: Facilitates smoother collaboration through automated feedback loops.
+
+### - Tools Used
+
+- **GitHub Actions**: Automates workflows such as running tests, linting code, or deploying updates when code is pushed.
+- **Docker**: Ensures consistent environment setup by containerizing the application.
+- **Heroku / AWS / Vercel** *(optional)*: Used for automated deployment of the application.
+- **PostgreSQL + Django Migrations**: Automatically updates the database schema during deployments.
