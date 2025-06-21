@@ -1,0 +1,27 @@
+## Api Security
+
+Understand the importance of securing the backend APIs.
+
+### #### 1. **Authentication**
+- **Purpose**: Verifies the identity of users before granting access to the system.
+- **Implementation**: JSON Web Tokens (JWT) or session-based login will be used.
+- **Importance**: Prevents unauthorized access to personal user data and actions like bookings and payments.
+
+#### 2. **Authorization**
+- **Purpose**: Determines what actions an authenticated user is allowed to perform.
+- **Implementation**: Role-based access control (e.g., admin vs. regular user).
+- **Importance**: Ensures users can only access and modify their own data, such as bookings and property listings.
+
+#### 3. **Rate Limiting**
+- **Purpose**: Controls the number of API requests a user or bot can make in a given time period.
+- **Implementation**: Middleware to detect and block excessive or suspicious traffic.
+- **Importance**: Protects the application from abuse, denial-of-service (DoS) attacks, and brute-force attempts.
+
+#### 4. **Data Encryption**
+- **Purpose**: Encrypts sensitive data both in transit (HTTPS) and at rest.
+- **Importance**: Secures sensitive user information such as login credentials and payment details.
+
+#### 5. **Input Validation & Sanitization**
+- **Purpose**: Prevents malicious inputs like SQL injection, XSS, etc.
+- **Implementation**: Validate all incoming data at the API level using schema validators.
+- **Importance**: Protects the application and users from code injection and data corruption.
