@@ -1,43 +1,48 @@
-## Feature Breakdown
+## API Security
+ 
+### 1. Authentication
 
-### 1. API Documentation
+**What it is**:
 
-**. OpenAPI Standard**: The backend APIs are documented using the OpenAPI standard to ensure clarity and ease of integration.
+Verifies the identity of users making API requests.
 
-**. Django REST Framework**: Provides a comprehensive RESTful API for handling CRUD operations on user and property data.
+**Implementation**:
 
-**. GraphQL**: Offers a flexible and efficient query mechanism for interacting with the backend.
+. Token-based authentication (e.g., JWT)
 
-### 2. User Authentication
-**. Endpoints**: /users/, /users/{user_id}/
+. Passwords stored using secure hashing algorithms (e.g., bcrypt)
 
-**. Features**: Register new users, authenticate, and manage user profiles.
+**Why it is Crucial**:
 
-### 3. Property Management
+Prevents unauthorized users from accessing user accounts or personal information.
 
-**. Endpoints**: /properties/, /properties/{property_id}/
+### 2. Authorization
 
-**. Features**: Create, update, retrieve, and delete property listings.
+**What it is**:
 
-### 4. Booking System
-**. Endpoints**: /bookings/, /bookings/{booking_id}/
+Controls what authenticated users are allowed to do within the system.
 
-**. Features**: Make, update, and manage bookings, including check-in and check-out details.
+**Implementation**:
 
-### 5. Payment Processing
+. Role-based access control (e.g., guest vs. host vs. admin)
 
-**. Endpoints**: /payments/
+. Route-level access restrictions
 
-**. Features**: Handle payment transactions related to bookings.
+**Why it is Crucial**:
 
-### 6. Review System
+Prevents users from performing actions outside their permissions (e.g., editing someone else’s property or accessing admin tools).
 
-**. Endpoints**: /reviews/, /reviews/{review_id}/
+### 3. Rate Limiting
 
-**. Features**: Post and manage reviews for properties.
+**What it is**:
 
-### 7. Database Optimizations
+Limits the number of requests a user or IP can make in a given time frame.
 
-**. Indexing**: Implement indexes for fast retrieval of frequently accessed data.
+**Implementation**:
 
-**. Caching**: Use caching strategies to reduce database load and improve performance.
+. Implemented via middleware (e.g., Flask-Limiter, Django Ratelimit, or NGINX rules)
+
+**Why it is Crucial**:
+
+Protects the API from brute-force attacks, spamming, and potential denial-of-service (DoS) attempts.
+
