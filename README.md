@@ -1,48 +1,36 @@
-## API Security
+## CI/CD Pipeline
  
-### 1. Authentication
+### What is CI/CD?
 
-**What it is**:
+**CI/CD stands for Continuous Integration and Continuous Deployment/Delivery**. It is a development practice that automates the process of testing, building, and deploying code every time changes are pushed to the repository.
 
-Verifies the identity of users making API requests.
+**Continuous Integration (CI)**: Automatically integrates code changes from multiple developers into a shared repository and runs tests to catch issues early.
 
-**Implementation**:
+**Continuous Deployment/Delivery (CD)**: Automates the process of releasing changes to production or staging environments after passing all tests.
 
-. Token-based authentication (e.g., JWT)
+### Why They Are Important For The Project.
 
-. Passwords stored using secure hashing algorithms (e.g., bcrypt)
+Implementing a CI/CD pipeline in the Airbnb Clone project provides several key benefits:
 
-**Why it is Crucial**:
+- **Faster development cycles** – Automates builds and testing
 
-Prevents unauthorized users from accessing user accounts or personal information.
+- **Improved code quality** – Runs tests and checks automatically with every commit
 
-### 2. Authorization
+- **Early bug detection** – Catches issues before they reach production
 
-**What it is**:
+- **Deployment confidence** – Ensures that only tested and verified code is deployed
 
-Controls what authenticated users are allowed to do within the system.
+### Recommended Tools
 
-**Implementation**:
+Here are some popular tools we may use to implement our CI/CD pipeline:
 
-. Role-based access control (e.g., guest vs. host vs. admin)
+- **GitHub Actions**: Automates workflows directly from GitHub for testing, linting, and deployment.
 
-. Route-level access restrictions
+- **Docker**: Provides consistent environments for development, testing, and production.
 
-**Why it is Crucial**:
+- **Docker Hub/GitHub Container Registry**: Stores and shares Docker images.
 
-Prevents users from performing actions outside their permissions (e.g., editing someone else’s property or accessing admin tools).
+- **Heroku / AWS / Render / Vercel**: Platforms for deploying the application.
 
-### 3. Rate Limiting
-
-**What it is**:
-
-Limits the number of requests a user or IP can make in a given time frame.
-
-**Implementation**:
-
-. Implemented via middleware (e.g., Flask-Limiter, Django Ratelimit, or NGINX rules)
-
-**Why it is Crucial**:
-
-Protects the API from brute-force attacks, spamming, and potential denial-of-service (DoS) attempts.
+- **Codecov / Coveralls**: Tracks test coverage as part of the CI process.
 
